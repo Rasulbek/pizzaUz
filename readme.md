@@ -4,4 +4,4 @@ __Dasturni yaratishdan maqsad:__'''Uydan turib ovqat buyurtma qilish hizmatini y
    Dasturda __products, orders nomli malumotlar bazalari yaratiladi.
  *  Ma'lumotlar bazasida: mavjud ovqat turlari va buyurtmalar haqida ma'lumotlar jamlangan bo'ladi.
  * _Buyurtmachi uchun:_
- * Uning addresi ...
+ * Uning addresi 
