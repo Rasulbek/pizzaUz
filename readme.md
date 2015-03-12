@@ -1,11 +1,10 @@
 #Pizza yetkazib berish
-##Dasturni yaratishdan maqsad:
-###Uydan turib ovqat buyurtma qilish hizmatini yo'lga qo'yish.###
-Bu hizmat rivojlangan davlatlarda ko'p yillardan beri samarali ishlab kelmoqda. Uning ko'p afzalliklari bor.
+###Dasturni yaratishdan maqsad: Uydan turib ovqat buyurtma qilish hizmatini yo'lga qo'yish.
+> Bu hizmat rivojlangan davlatlarda ko'p yillardan beri samarali ishlab kelmoqda. Uning ko'p afzalliklari bor.
 ##__Dasturni afzalligi:__
 ### Dasturda ```products, orders``` nomli malumotlar bazalari yaratiladi.
 
-> Ma'lumotlar bazasida: mavjud ovqat turlari va buyurtmalar haqida ma'lumotlar jamlangan bo'ladi. Buyurtmachi (klient) internet orqali o'ziga yoqqan taomni tanlaydi va bu haqda kerakli ma'lumotlarni beradi.
+Ma'lumotlar bazasida: mavjud ovqat turlari va buyurtmalar haqida ma'lumotlar jamlangan bo'ladi. Buyurtmachi (klient) internet orqali o'ziga yoqqan taomni tanlaydi va bu haqda kerakli ma'lumotlarni beradi.
 
 _Bular:_
    - 1. Buyurtma yetkazilish addresi va buyurtmachi e-mail addresi yoki telefon raqami kiritiladi.
