@@ -1,6 +1,8 @@
 #Pizza yetkazib berish
 ###Dasturni yaratishdan maqsad: Uydan turib ovqat buyurtma qilish hizmatini yo'lga qo'yish.
-> Bu hizmat rivojlangan davlatlarda ko'p yillardan beri samarali ishlab kelmoqda. Uning ko'p afzalliklari bor.
+> Bu hizmat rivojlangan davlatlarda ko'p yillardan beri samarali ishlab kelmoqda. Uning ko'p afzalliklari bor. <
+
+
 ##__Dasturni afzalligi:__
 ### Dasturda ```products, orders``` nomli malumotlar bazalari yaratiladi.
 
