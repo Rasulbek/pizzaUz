@@ -1,0 +1,23 @@
+@(activePage: String)
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #CE3131">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-target="#menu1" data-toggle="collapse" >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" style="COLOR: #ffffff">PizzaUZ</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menu1">
+            <ul class="nav navbar-nav" >
+                <li class="@if(activePage == "home") {active}"><a style="COLOR: #ffffff" href="@routes.Application.index()">Главная</a></li>
+                <li class="@if(activePage == "neworder") {active}"><a style="COLOR: #ffffff" href="/edit">Заказать</a></li>
+                <li class="@if(activePage == "orderslist") {active}"><a href="" style="COLOR: #ffffff">Все заказы<span class="caret"></span> </a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
