@@ -5,5 +5,5 @@ __Dasturni yaratishdan maqsad:__ "Uydan turib ovqat buyurtma qilish hizmatini yo
  *  Ma'lumotlar bazasida: mavjud ovqat turlari va buyurtmalar haqida ma'lumotlar jamlangan bo'ladi.
  * _Buyurtmachi uchun:_
  * Buyurtma yetkazilish addresi va buyurtmachi e-mail addresi yoki telefon raqami kiritiladi.
- * Shundan so'ng Moderator buyurtmani oladi va uni ko'rsatilgan manzilga yuborilgani haqida SMS orqali
- yoki e-mail orqali habar beradi.
+ * Shundan so'ng Moderator buyurtmani oladi va uni ko'rsatilgan manzilga yuborilgani haqida _SMS_
+ yoki _e-mail_ orqali habar beradi.
