@@ -1,22 +1,23 @@
 @(activePage: String)
 
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #CE3131">
+<nav class="navbar navbar-inverse navbar-fixed-top pull-right" style="background: url(@routes.Assets.at("images/menu.jpg"))">
     <div class="container">
         <div class="navbar-header">
+            <a class="navbar-brand" href="/" style="COLOR: #ffffff"><img alt="PizzaUZ" height="30px" src=@routes.Assets.at("images/logo.png")></a>
             <button class="navbar-toggle" type="button" data-target="#menu1" data-toggle="collapse" >
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/" style="COLOR: #ffffff">PizzaUZ</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="menu1">
+        <div class="collapse navbar-collapse" id="menu1" >
             <ul class="nav navbar-nav" >
-                <li class="@if(activePage == "home") {active}"><a style="COLOR: #ffffff" href="@routes.Application.index()">Главная</a></li>
-                <li class="@if(activePage == "neworder") {active}"><a style="COLOR: #ffffff" href="/edit">Заказать</a></li>
-                <li class="@if(activePage == "orderslist") {active}"><a href="" style="COLOR: #ffffff">Все заказы<span class="caret"></span> </a></li>
-
+                <li class="@if(activePage == "home") {active}"><a style="COLOR: #ffffff" href="@routes.Application.index()"><span class="glyphicon glyphicon-th-large"></span> Главная</a></li>
+                <li class="@if(activePage == "neworder") {active}"><a style="COLOR: #ffffff" href="/order"><span class="glyphicon glyphicon-shopping-cart"></span> Заказать</a></li>
+                <li class="@if(activePage == "aboutus") {active}"><a href="/about" style="COLOR: #ffffff"><span class="glyphicon glyphicon-info-sign"></span> О нас</a></li>
+                <li class="@if(activePage == "vacancy") {active}"><a href="/vacancy" style="COLOR: #ffffff"><span class="glyphicon glyphicon-bullhorn"></span> Вакансии</a></li>
             </ul>
         </div>
     </div>

@@ -1,8 +1,65 @@
 @(message: String)
 
 @main("Pizza.Uz - Главная страница") {
-
     @navbar("home")
-
-
+    <div class="container">
+        <div class="col-lg-10 col-lg-offset-1 text-center h2" style="color: #fff">
+            <img align="top" src=@routes.Assets.at("images/biglogo.png")>желает вам приятного аппетита!
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class=" panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">SUPREME</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-6">
+                        <img src=@routes.Assets.at("images/piz1.png")>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <h6>Classic marinara sauce, pepperoni, seasoned pork, beef, fresh mushrooms, fresh green bell peppers and fresh red onions.</h6>
+                        <h2 class="label label-info">7000 UZS</h2><br><br>
+                        <a href="order/1"><button class="btn btn-danger">Заказать</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class=" panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">MEAT LOVER'S</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-6">
+                        <img src=@routes.Assets.at("images/piz2.png")>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <h6>
+                            Classic marinara sauce, pepperoni, Italian sausage, roasted ham, hardwood smoked bacon, seasoned pork and beef.
+                        </h6>
+                        <h2 class="label label-info">8500 UZS</h2><br><br>
+                        <a href="order/2"><button class="btn btn-danger">Заказать</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class=" panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">VEGGIE LOVER'S</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-6">
+                        <img src=@routes.Assets.at("images/piz3.png")>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <h6>
+                            Classic marinara sauce, fresh mushrooms, fresh red onions, fresh green bell peppers, Roma tomatoes and black olives.
+                        </h6>
+                        <h2 class="label label-info">9000 UZS</h2><br><br>
+                        <a href="order/3"><button class="btn btn-danger">Заказать</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 }
