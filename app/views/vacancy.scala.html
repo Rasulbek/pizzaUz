@@ -1,0 +1,45 @@
+@(message: String)
+
+@main("Работа в Pizza.Uz") {
+    @navbar("vacancy")
+    <div class="container">
+        <div class="col-xs-12 col-md-6 col-lg-8 col-lg-offset-2">
+            <div class=" panel panel-info">
+                <div class="panel-body">
+                    <img class="center-block" src=@routes.Assets.at("images/biglogo.png")>
+                    <div class="h3 text-center">объявляет ряд вакансии</div>
+                    <br>
+                    <table class="table table-bordered">
+                        <thead class="well">
+                            <td>#</td>
+                            <td>Специальность</td>
+                            <td>Зар. плата</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Повар</td>
+                                <td>от 500 000 до 1 000 000 сумов</td>
+                            </tr>
+                            <tr class="well">
+                                <td>2</td>
+                                <td>Доставщик</td>
+                                <td>600 000 сумов</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Стораж</td>
+                                <td>450 000 сумов</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="h3"><b>Контактные данные:</b></div>
+                    <br>Директор: +998 97 5124412<br>
+                    <div>E-mail: mr.abdurasuloff&commat;gmail.com</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
