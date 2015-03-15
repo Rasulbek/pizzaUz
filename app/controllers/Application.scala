@@ -14,4 +14,7 @@ object Application extends Controller {
   def vacancy = Action {
     Ok(views.html.vacancy(""))
   }
+  def order = Action {
+    Ok(views.html.order(""))
+  }
 }
