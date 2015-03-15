@@ -1,0 +1,27 @@
+@(message: String)
+
+@main("Работа в Pizza.Uz") {
+    @navbar("order")
+    <div class="container">
+        <div class="col-xs-12 col-md-6 col-lg-8 col-lg-offset-2">
+            <div class=" panel panel-info">
+                <div class="panel-body">
+                    <form class="form-vertical"><fieldset>
+                        <legend>Новый заказ</legend>
+                        <div class="control-group warning">
+                            <label class="control-label">Адрес:</label>
+                            <div class="controls">
+                                <span class="help-inline">Supporting inline help text</span>
+                                <input type="text" class="input-mini">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-primary">Save</button>
+                        </div>
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
