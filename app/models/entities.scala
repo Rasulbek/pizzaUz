@@ -10,4 +10,5 @@ package models
 case class Pizza (id: Option[Int],
                  name: String,
                  desc: String,
+                 image: String,
                  price: Int)
