@@ -1,12 +1,18 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
+import play.api.db.slick.Config.driver.simple._
+import play.api.db.slick._
+import models._
+import play.api.Logger
+
+import scala.slick.lifted.TableQuery
 
 object Application extends Controller {
-
-  def index = Action {
-    Ok(views.html.index(""))
+  val products = TableQuery[ProductTable]
+  def index = DBAction{ implicit rs =>
+    Logger.info(s"SHOW_ALL = ${products.list}")
+    Ok(views.html.index(products.list))
   }
   def about = Action {
     Ok(views.html.about(""))
