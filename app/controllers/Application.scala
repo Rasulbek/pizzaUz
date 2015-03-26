@@ -10,9 +10,12 @@ import scala.slick.lifted.TableQuery
 
 object Application extends Controller {
   val products = TableQuery[ProductTable]
-  def index = DBAction{ implicit rs =>
+  /*def index = DBAction{ implicit rs =>
     Logger.info(s"SHOW_ALL = ${products.list}")
     Ok(views.html.index(products.list))
+  }*/
+  def index = Action{
+    Redirect(routes.Orders.list())
   }
   def about = Action {
     Ok(views.html.about(""))
@@ -21,6 +24,6 @@ object Application extends Controller {
     Ok(views.html.vacancy(""))
   }
   def order = Action {
-    Ok(views.html.order(""))
+    Ok(views.html.order(null,0))
   }
 }

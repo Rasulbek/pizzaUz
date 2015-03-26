@@ -1,5 +1,4 @@
-@(message: String)
-
+@(pizza: List[Pizza], pizzaId: Int)
 @main("Работа в Pizza.Uz") {
     @navbar("order")
     <div class="container">
@@ -7,6 +6,7 @@
             <div class=" panel panel-info">
                 <div class="panel-body">
                     <form class="form-vertical"><fieldset>
+                        <div class="text-info">@pizza @pizzaId</div>
                         <legend>Новый заказ</legend>
                         <div class="control-group warning">
                             <label class="control-label">Адрес:</label>
