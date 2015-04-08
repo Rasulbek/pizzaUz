@@ -1,25 +1,99 @@
 @(pizza: List[Pizza], pizzaId: Int)
-@main("Работа в Pizza.Uz") {
+@main("Новый Заказ - Pizza.Uz") {
     @navbar("order")
-    <div class="container">
-        <div class="col-xs-12 col-md-6 col-lg-8 col-lg-offset-2">
+    <div class="container" xmlns="http://www.w3.org/1999/html">
+        <div class="col-xs-12 col-md-6 col-lg-8 col-lg-offset-2 col-md-offset-3">
             <div class=" panel panel-info">
                 <div class="panel-body">
-                    <form class="form-vertical"><fieldset>
-                        <div class="text-info">@pizza @pizzaId</div>
-                        <legend>Новый заказ</legend>
-                        <div class="control-group warning">
-                            <label class="control-label">Адрес:</label>
-                            <div class="controls">
-                                <span class="help-inline">Supporting inline help text</span>
-                                <input type="text" class="input-mini">
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button class="btn btn-primary">Save</button>
-                        </div>
+                    <fieldset class="form-vertical">
+                        @if(pizzaId!=0){
+                            @for(piz <- pizza){
+                                <legend>@piz.name | @piz.price UZS <span class="text-danger h6">($ @((piz.price*100/3880)/100.00))</span></legend>
+                                <div class="col-xs-12  col-lg-4">
+                                    <img src="../assets/images/@piz.image">
+                                </div>
+                                <div class="col-xs-12 col-lg-8 h4">
+                                    <br>
+                                    @piz.desc
+                                    <br><br>
+                                </div>
+                                <div class="col-xs-12 control-group warning">
+                                    <form name="orderform" action="/addorder" method="POST">
+                                        <input type="hidden" name="idprod" value="@piz.id">
+                                        <div class="row">
+                                        <div class="col-xs-12 col-md-9">
+                                            <label class="control-label">Ваш имя</label>
+                                            <div class="controls">
+                                                <input name="name" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3">
+                                            <label class="control-label">Кол-во пицц</label>
+                                            <div class="controls">
+                                                <input name="quantity" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <label class="control-label">Адрес</label>
+                                    <div class="controls">
+                                        <input name="address" type="text" class="form-control">
+                                    </div><br>
+                                    <label class="control-label">Контакные данные <span class="h6 text-info">(рекомендуется вводит номер телефона)</span></label>
+                                    <div class="controls">
+                                        <input name="contact" type="text" class="form-control">
+                                    </div><br>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary btn-block">Заказать</button>
+                                    </div>
+                                </form>
+                                </div>
+
+                            }
+                        }else{
+                                <div class="col-xs-12 control-group warning">
+                                    <form name="orderform" action="/addorder" method="post">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <label class="control-label">Выберайте</label>
+                                            <select name="pizza" class="form-control">
+                                                @for(piz1 <- pizza){
+                                                    <option value="@piz1.id"> @piz1.name (@piz1.price sum)</option>
+                                                }
+                                            </select>
+                                            <br>
+                                        </div>
+                                        <div class="col-xs-12 col-md-9">
+                                            <label class="control-label">Ваш имя</label>
+                                            <div class="controls">
+                                                <input name="name" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-3">
+                                            <label class="control-label">Кол-во пицц</label>
+                                            <div class="controls">
+                                                <input name="quantity" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <label class="control-label">Адрес</label>
+                                    <div class="controls">
+                                        <input name="address" type="text" class="form-control">
+                                    </div><br>
+                                    <label class="control-label">Контакные данные <span class="h6 text-info">(рекомендуется вводит номер телефона)</span></label>
+                                    <div class="controls">
+                                        <input name="contact" type="text" class="form-control">
+                                    </div><br>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-success btn-block">Заказать</button>
+                                    </div>
+                                    </form>
+                                </div>
+                        }
+
                     </fieldset>
-                    </form>
+
                 </div>
             </div>
         </div>

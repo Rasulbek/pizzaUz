@@ -1,0 +1,40 @@
+@(orders: List[Order])
+
+@main("Все заказы - Pizza.Uz") {
+    @navbar("allorder")
+    <div class="container">
+        <div class="col-lg-10 col-lg-offset-1 text-center h2" style="color: #fff">
+            Список всех заказов
+        </div>
+        <table class="table">
+            <thead class="well">
+                <td>#</td><td>Имя Заказчика</td><td>ID Пиццы</td><td>Адрес Получателья</td><td>E-mail или Ном. Телефона</td><td>Время Заказа</td><td>Статус</td><td>Действие</td>
+            </thead>
+            <tbody style="background: #ffffff">
+        @for(order <- orders){
+            <tr>
+                <td>@order.id</td>
+                <td>@order.name</td>
+                <td>@order.product</td>
+                <td>@order.address</td>
+                <td>@order.email</td>
+                <td>@order.time</td>
+                <td>@if(order.delivered==false){
+                    <span class="text-danger text-center">НЕ ДОСТАВЛЕН</span>
+                }else{
+                    <span class="text-success text-center">ДОСТАВЛЕН</span>
+                }</td>
+                <td>
+                    <a class="btn btn-success" title="Доставлен" href="/delivered/@order.id">
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                    </a>
+                    <a class="btn btn-danger" title="Удалить" href="/remorder/@order.id">
+                    <span class="glyphicon glyphicon-remove-circle"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+}
